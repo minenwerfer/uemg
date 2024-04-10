@@ -4,5 +4,6 @@
 
 - texlive
 - texlive-lua
+- make
 - pandoc
 
