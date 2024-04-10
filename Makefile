@@ -1,4 +1,4 @@
-ASSIGNMENTS=$(wildcard assignments/*/*.md)
+ASSIGNMENTS=$(wildcard documents/*/*.md)
 .PHONY: $(ASSIGNMENTS)
 
 all:: $(ASSIGNMENTS)
