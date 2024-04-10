@@ -4,6 +4,7 @@ ASSIGNMENTS=$(wildcard assignments/*/*.md)
 all:: $(ASSIGNMENTS)
 
 $(ASSIGNMENTS):
-	pandoc $@ \
-		-o $(patsubst %.md, %.pdf, $@) \
-		-V geometry:margin=1in
+	pandoc defaults.yaml $@ \
+		-s -N \
+		-o$(patsubst %.md, %.pdf, $@) \
+		--template=template.tex

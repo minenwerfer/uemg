@@ -1,14 +1,3 @@
----
-author: João G. Santos
-email: joaosan177@gmail.com
-RA: 2411612877
----
-
-# Atividade 1
-
-- Aluno: João Gabriel Santos / RA: 2411612877
-- Curso: Engenharia da Computação 1º Período (noturno)
-
 ## Definição
 
 A Engenharia da Computação é a forma mais aplicada da Ciência da Computação,
