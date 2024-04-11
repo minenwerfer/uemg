@@ -1,3 +1,7 @@
+---
+title: Lista aula 1
+---
+
 ## a. Programa
 
 Arquivo que pode ser executado pelo sistema operacional que segue instruções
@@ -60,7 +64,6 @@ Exemplos:
 
 - if
 - else
-- elif
 - switch
 
 ## h. Comandos de Repetição
@@ -70,5 +73,4 @@ Exemplos:
 - for
 - while
 - do
-
 

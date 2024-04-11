@@ -1,4 +1,8 @@
-1. 
+---
+title: Lista aula 2
+---
+
+### 1
 
 ```c
 int main()
