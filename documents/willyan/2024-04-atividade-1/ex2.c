@@ -2,7 +2,10 @@
 
 int main() 
 {
-  float f, c;
+  float
+    f = 0,
+    c = 0;
+
   puts("Insira a temperatura em Fahrenheit: ");
   scanf("%f", &f);
 

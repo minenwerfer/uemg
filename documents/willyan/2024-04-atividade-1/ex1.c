@@ -3,14 +3,18 @@
 
 int main() 
 {
-  int h, a, b;
+  float
+    h = 0,
+    a = 0,
+    b = 0;
+
   puts("Insira o cateto A: ");
-  scanf("%d", &a);
+  scanf("%f", &a);
   puts("Insira o cateto B: ");
-  scanf("%d", &b);
+  scanf("%f", &b);
 
   h = sqrt(pow(a, 2) + pow(b, 2));
 
-  printf("O resultado é: %d\n", h);
+  printf("O resultado é: %f\n", h);
   return 0;
 }
