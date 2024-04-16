@@ -7,7 +7,7 @@ title: Lista aula 2
 ```c
 int main()
 {
-  int idade;
+  int idade = 0;
   scanf("%d", &idade);
 
   if( idade >= 5 && idade <= 7 )
@@ -30,5 +30,7 @@ int main()
   {
     puts("Sênior\n");
   }
+
+  return 0;
 }
 ``` 
