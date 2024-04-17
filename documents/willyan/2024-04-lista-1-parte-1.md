@@ -5,6 +5,8 @@ title: Lista aula 2
 ### 1
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -40,6 +42,8 @@ int main()
 ### 2
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -69,15 +73,15 @@ int main()
     }
 
     if( !i || c > max )   max = c;
-    if( !i || c < max )   mcn = c;
+    if( !i || c < max )   min = c;
   }
 
   printf("Soma: %d\n", soma);
   printf("Quantidade: %d\n", n);
-  printf("Média: %d\n", soma / n);
+  printf("Média: %f\n", (float)(soma / n));
   printf("Menor: %d\n", min);
   printf("Maior: %d\n", max);
-  printf("Média pares: %d\n", par / numpares);
+  printf("Média pares: %f\n", (float)(par / numpares));
 
   return 0;
 }
@@ -86,6 +90,8 @@ int main()
 ### 3
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -98,7 +104,7 @@ int main()
   while( i++ < n )
   {
     int primo = 1;
-    j = 0;
+    j = 1;
 
     while( j++ < i )
     {
@@ -122,6 +128,8 @@ int main()
 ### 4
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int n = 0,
@@ -139,6 +147,8 @@ int main()
 ### 5
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -171,6 +181,8 @@ int main()
 ### 6
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -194,6 +206,8 @@ int main()
 ### 6
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -217,6 +231,8 @@ int main()
 ### 7
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -240,6 +256,8 @@ int main()
 ### 8
 
 ```c
+#include <stdio.h>
+
 int main()
 {
   int
@@ -263,24 +281,86 @@ int main()
 ### 9
 
 ```c
+#include <stdio.h>
 #include <random.h>
 
 int main()
 {
-  int num = rand();
   int
-    soma = 0,
-    idade = 0,
-    qtd = 0;
+      num = rand(),
+      guess = 0,
+      i = 0;
 
   do {
-    scanf("%d", idade);
-    soma += idade;
-    qtd++;
+    scanf("%d", guess);
+    printf("Você digitou um número %s!\n", guess > num
+        ? "maior"
+        : "menor");
 
-  } while (idade != 0);
+  } while (guess != num);
 
-  printf("Média de idades: %d\n", idade / qtd);
+  printf("Acertou, mizeravi\n");
+
+  return 0;
+}
+```
+
+### 10
+
+```c
+#include <stdio.h>
+
+#define PRINT_OP(exp) \
+  printf(#exp " = %.2f\n", #exp, exp)
+
+enum {
+    ADD = 1,
+    SUB = 2,
+    MUL = 3,
+    DIV = 4,
+    EXIT = 5,
+    OPTS_SIZE,
+};
+
+char *opts[] = {
+  "Somar",
+  "Subtrair",
+  "Multiplicar",
+  "Dividir",
+  "Sair",
+};
+
+int main()
+{
+  int opt = 0;
+  float
+    x = 0,
+    y = 0;
+
+  printf("X: "); scanf("%f", &x);
+  printf("Y: "); scanf("%f", &y);
+
+  do {
+    int i = 0;
+    for( ; i<OPTS_SIZE - 1; i++ )
+    {
+      printf("#%d - %s\n", i + 1, opts[i]);
+    }
+
+    scanf("%d", &opt);
+    getchar();
+
+    switch( opt )
+    {
+      case ADD: PRINT_OP(x + y); break;
+      case SUB: PRINT_OP(x - y); break;
+      case MUL: PRINT_OP(x * y); break;
+      case DIV: PRINT_OP(x / y); break;
+    }
+
+  } while (opt != 5);
+
+  printf("Acertou, mizeravi\n");
 
   return 0;
 }
