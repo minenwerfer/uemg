@@ -2,7 +2,7 @@
 title: Joan Scott
 ---
 
-## Biografia
+## Biografia teste
 
 Joan Wallach Scott é uma historiadora e militante feminista americana de origem judaica. Durante a sua carreira Joan Scott se debruçou principalmente sobre os tópicos de História Feminista e Teoria dos Gêneros. O seu trabalho "Gender: A Useful Category of Historical Analysis" publicado em 1986 é considerado uma das fundações do campo de estudos da História dos Gêneros.
 

@@ -1,0 +1,10 @@
+{
+  "name": "uemgaes",
+  "private": true,
+  "scripts": {
+    "postinstall": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11"
+  }
+}

@@ -1,10 +1,17 @@
-ASSIGNMENTS := $(shell find documents/ -name \*\.md -mtime -7)
-.PHONY: $(ASSIGNMENTS)
+ALL = $(wildcard documents/*/*.md)
+LATEST = $(shell git diff --name-only --cached | grep 'documents/' | grep '\.md')
 
-all:: $(ASSIGNMENTS)
+.PHONY: $(ALL)
 
-$(ASSIGNMENTS):
-	pandoc defaults.yaml $@ \
-		-s -N \
-		-o$(patsubst %.md, %.pdf, $@) \
-		--template=template.tex
+all: $(ALL)
+latest: $(LATEST)
+
+run_pandoc = $(shell pandoc defaults.yaml $1 \
+	-s -N \
+	-o$(patsubst %.md, %.pdf, $1) \
+	--template=template.tex)
+
+$(ALL):
+	@echo building $@
+	$(call run_pandoc, $@)
+
