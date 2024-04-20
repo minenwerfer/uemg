@@ -16,7 +16,13 @@ jobs:
           version: 3.1.2
       - name: Install dependencies
         run: |
-          sudo apt-get install -y pdflatex
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-latex-extra \
+            texlive-luatex
+
       - name: Run make
         run: make
       - name: Create PR
