@@ -1,4 +1,4 @@
-ASSIGNMENTS=$(wildcard documents/*/*.md)
+ASSIGNMENTS := $(shell find documents/ -name \*\.md -mtime -7)
 .PHONY: $(ASSIGNMENTS)
 
 all:: $(ASSIGNMENTS)

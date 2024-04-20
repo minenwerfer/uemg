@@ -1,0 +1,18 @@
+name: Make documents
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install pandoc
+        uses: pandoc/actions/setup@{main}
+        with:
+          version: 3.1.2
+      - name: Run make
+        run: make
