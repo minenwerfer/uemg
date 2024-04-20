@@ -1,5 +1,6 @@
 ---
 title: Linguagem Python
+author: João Gabriel Gonçalves Santos e Danilo de Jesus Matos
 ---
 
 ## Introdução
@@ -59,7 +60,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ## Considerações finais
 
-Há com efeito diversos fatores que concorrem para o sucesso do Python na computação acadêmica e nas indústrias.
+Há com efeito diversos fatores que concorrem para o sucesso do Python na computação acadêmica e nas indústrias, sendo o mais preponderante deles a curva de aprendizado suave. Espera-se que a popularidade do Python se mantenha constante por mais muitos anos.
 
 - [1] - https://en.wikipedia.org/wiki/Python_(programming_language)
 - [2] - https://en.wikipedia.org/wiki/Zen_of_Python
